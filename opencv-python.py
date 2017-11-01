@@ -9,11 +9,10 @@ while 1:
 
     hand_cascade = cv2.CascadeClassifier('haarcascade_hand.xml')
 
-    hands = hand_cascade.detectMultiScale(img, 1.3, 5)
+    hands = hand_cascade.detectMultiScale(gray, 1.2, 4)
 
     for (x,y,w,h) in hands:
         cv2.rectangle(img,(x,y),(x+w,y+h),(0,255,0),2)
-
 
     cv2.imshow('img',img)
     k = cv2.waitKey(30) & 0xff
