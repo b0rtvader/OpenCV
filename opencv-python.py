@@ -7,7 +7,7 @@ while 1:
     ret, img = cap.read()
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
-    hand_cascade = cv2.CascadeClassifier('haarcascade_hand.xml')
+    hand_cascade = cv2.CascadeClassifier('hand1.xml')
 
     hands = hand_cascade.detectMultiScale(gray, 1.2, 4)
 
